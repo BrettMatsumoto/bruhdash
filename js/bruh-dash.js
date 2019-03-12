@@ -38,8 +38,14 @@ global.bruhdash = {
   },
   
   // returns an array with all falsey values removed
-  compact: function() {
-
+  compact: function(arr) {
+    var newArr = [];
+    for (i=0;i<arr.length;i++){
+      if (typeof arr[i] === 'number' && arr[i]>0){
+        newArr.push(arr[i])
+      }
+    }
+    return newArr
   },
 
   // creates a slice of an array from the start index up to but not including the end index
