@@ -22,18 +22,19 @@ global.bruhdash = {
   },
 
   // returns the index of the first matching element from left to right
-  indexOf: function () {
-
+  indexOf: function (arr,i) {
+    return arr.indexOf(i)
   },
 
   // returns the index of the first matching element from right to left
-  lastIndexOf: function () {
-
+  lastIndexOf: function (arr,i) {
+    return arr.lastIndexOf(i);
   },
 
   // returns an array with all elements except for the last element
-  initial: function () {
-
+  initial: function (arr) {
+    arr.pop();
+    return arr
   },
   
   // returns an array with all falsey values removed
