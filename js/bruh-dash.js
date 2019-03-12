@@ -16,8 +16,9 @@ global.bruhdash = {
   },
 
   // returns the last element of an array
-  last: function () {
-
+  last: function (arr) {
+    var last = arr.pop();
+    return last
   },
 
   // returns the index of the first matching element from left to right
