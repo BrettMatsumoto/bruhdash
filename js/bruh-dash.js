@@ -44,6 +44,9 @@ global.bruhdash = {
       if (typeof arr[i] === 'number' && arr[i]>0){
         newArr.push(arr[i])
       }
+      if (typeof arr[i] === 'string' && arr[i].length>0){
+        newArr.push(arr[i])
+      }
     }
     return newArr
   },
@@ -54,8 +57,9 @@ global.bruhdash = {
   },
 
   // returns a slice of array with n elements dropped from the beignning
-  drop: function(){
-
+  drop: function(arr,n){
+    var n=2;
+    return arr.slice(n)
   },
 
   // returns a slice of array with n elements dropped from the end
