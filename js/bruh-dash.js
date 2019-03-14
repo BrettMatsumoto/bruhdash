@@ -88,8 +88,16 @@ global.bruhdash = {
   },
 
   // creates a slice of an array with n elements taken from the end
-  takeRight: function () {
-    
+  takeRight: function (arr,n) {
+    if (n > arr.length){
+      return arr
+    } else if (n === 0){
+      return []
+    } else if (n == undefined){
+      return arr.splice(-1)
+    } else {
+      return arr.splice(-n)
+    }
   },
 
   // fills elements of array with specified value from the start index
