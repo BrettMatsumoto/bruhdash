@@ -102,8 +102,8 @@ global.bruhdash = {
 
   // fills elements of array with specified value from the start index
   // up to but not including the end index
-  fill: function() {
-
+  fill: function(arr,i) {
+    return arr.fill(i, 0, arr.length-1,)
   },
 
   // removes all given values from an array
