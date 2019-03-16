@@ -111,8 +111,13 @@ global.bruhdash = {
   },
 
   // removes all given values from an array
-  pull: function () {
-
+  pull: function (arr,ind,ind2) {
+    for (var i = arr.length-1; i > -1; i--){
+      if (arr[i] == ind || arr[i] == ind2){
+        arr.splice(arr[i],1)
+      }
+    }
+    return arr;
   },
 
   // removes elements of an array corresponding to the given indices
