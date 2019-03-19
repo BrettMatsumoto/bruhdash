@@ -123,15 +123,21 @@ global.bruhdash = {
   // removes elements of an array corresponding to the given indices
   pullAt: function (arr,ind) {
     var newArr = [];
-    for (var i = 0; i<ind.length;i++){
-      newArr.push(arr[ind[i]]) //pushes main array element with index that equals the index values of ind array;
+    for (var i = 0; i<ind.length;i++){ //loops through index array
+      newArr.push(arr[ind[i]]) //pushes main array element with index that equals the index provided by ind array
     }
     return newArr
   },
 
   // creates an array excluding all the specified values
-  without: function() {
-
+  without: function(arr, val, val2) {
+    var newArr = [];
+    for (var i = 0; i<arr.length; i++){
+      if (arr[i] !== val && arr[i] !== val2){
+        newArr.push(arr[i])
+      }
+    }
+    return newArr;
   },
 
   // returns an array with specified values excluded
