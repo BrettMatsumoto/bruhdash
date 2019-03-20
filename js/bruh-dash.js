@@ -141,8 +141,13 @@ global.bruhdash = {
   },
 
   // returns an array with specified values excluded
-  difference: function() {
-
+  difference: function(arr, val) {
+      for (var i = 0; i < val.length;i++){
+        if (arr.includes(val[i])){
+          arr.shift(val[i],1)
+        }
+      }
+      return arr;
   },
 
   /*******************
