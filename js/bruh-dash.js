@@ -112,7 +112,7 @@ global.bruhdash = {
 
   // removes all given values from an array
   pull: function (arr,ind,ind2) {
-    for (var i = arr.length-1; i > -1; i--){
+    for (var i = arr.length-1; i >= 0; i--){
       if (arr[i] == ind || arr[i] == ind2){
         arr.splice(arr[i],1)
       }
@@ -155,8 +155,20 @@ global.bruhdash = {
    *******************/ 
 
   // creates an array of grouped elements
-  zip: function () {
-
+  zip: function (arr,arr2) {
+    var bigArr = [];
+    var smallArr = [];
+    var newArr = [];
+    for (var i = 0; i < arr.length && arr2.length;i++){
+      bigArr.push(arr[i]);
+      bigArr.push(arr2[i]); 
+      }
+    for (var a = 0; a > bigArr.length; a++){
+      smallArr.push(bigArr[a]);
+      smallArr.push(bigArr[a+1]);
+      newArr.push(smallArr);
+    }
+    return newArr;
   },
 
   // creates an array of grouped elements in their pre-zip configuration
