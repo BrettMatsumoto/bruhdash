@@ -159,14 +159,11 @@ global.bruhdash = {
     var bigArr = [];
     var smallArr = [];
     var newArr = [];
-    for (var i = 0; i < arr.length && arr2.length;i++){
+    for (var i = 0; i < arr.length && i < arr2.length; i++){
       bigArr.push(arr[i]);
-      bigArr.push(arr2[i]); 
-      }
-    for (var a = 0; a > bigArr.length; a++){
-      smallArr.push(bigArr[a]);
-      smallArr.push(bigArr[a+1]);
-      newArr.push(smallArr);
+      bigArr.push(arr2[i]);
+      smallArr = bigArr.splice(0,2);
+      newArr.push(smallArr)
     }
     return newArr;
   },
